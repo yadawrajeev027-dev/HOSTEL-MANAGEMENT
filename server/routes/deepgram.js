@@ -21,8 +21,15 @@ router.post('/transcribe', upload.single('audio'), async (req, res) => {
     const deepgram = createClient(apiKey);
 
     // Call Deepgram SDK to transcribe the audio buffer
+    const payload = {
+      buffer: req.file.buffer,
+      mimetype: req.file.mimetype || 'audio/webm'
+    };
+
+    console.log(`[DEEPGRAM DEBUG] Sending audio to Deepgram. Buffer size: ${req.file.buffer.length} bytes, Mimetype: ${payload.mimetype}`);
+
     const { result, error } = await deepgram.listen.prerecorded.transcribeFile(
-      req.file.buffer,
+      payload,
       {
         model: 'nova-2',
         smart_format: true,
@@ -36,6 +43,7 @@ router.post('/transcribe', upload.single('audio'), async (req, res) => {
 
     // Extract the transcribed text
     const transcript = result?.results?.channels?.[0]?.alternatives?.[0]?.transcript || '';
+    console.log(`[DEEPGRAM DEBUG] Transcript received: "${transcript}"`);
     
     res.json({ success: true, transcript });
 
