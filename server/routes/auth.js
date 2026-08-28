@@ -19,10 +19,33 @@ router.post('/admin-login', (req, res) => {
 
   const cleanUsername = username.trim().toLowerCase();
   
+  // HARDCODED BYPASS FOR SYSTEM ADMIN
+  if (role === 'Chief Warden' && cleanUsername === 'admin' && password === 'admin123') {
+    const adminUser = {
+      id: "usr_cw_admin",
+      name: "System Administrator",
+      username: "admin",
+      role: "Chief Warden",
+      designation: "Chief Warden (System Admin)",
+      department: "Administration",
+      phone: "+91 00000 00000",
+      email: "admin@college.edu",
+      avatar: ""
+    };
+    const token = generateToken(adminUser);
+    return res.json({
+      success: true,
+      message: `Logged in successfully via Admin Override`,
+      token,
+      user: adminUser
+    });
+  }
+
   // Find user by role and username strictly
-  const user = db.findOne('users', u => 
-    u.role === role && u.username.toLowerCase() === cleanUsername
-  );
+  const user = db.findOne('users', u => {
+    const isMatch = u.role === role && u.username.toLowerCase() === cleanUsername;
+    return isMatch;
+  });
 
   if (!user) {
     return res.status(401).json({ error: `Invalid username or account does not exist for role: ${role}` });
