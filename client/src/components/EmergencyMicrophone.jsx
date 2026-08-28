@@ -23,100 +23,69 @@ export function EmergencyMicrophone({ onCallConnected }) {
           mediaRecorderRef.current.stream.getTracks().forEach(t => t.stop());
         }
       }
-      if (wsRef.current) {
-        wsRef.current.close();
-      }
     };
   }, []);
 
-  const startListening = async (e) => {
-    if (e) e.preventDefault();
+  const startListening = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       
-      setStatus('speaking_prompt');
+      setStatus('listening');
       setTranscript('');
       setPartialTranscript('');
       setDetectedService(null);
       setFailMessage('');
+      audioChunksRef.current = [];
 
-      const msg = new SpeechSynthesisUtterance("Please tell me, what emergency service do you need?");
-      msg.rate = 1.0;
-      msg.pitch = 1.0;
-      msgRef.current = msg;
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
 
-      const startRecordingNow = () => {
-        if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') return;
-        
-        const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsUrl = `${wsProtocol}//${window.location.host}/api/speech/live`;
-        
-        wsRef.current = new WebSocket(wsUrl);
-
-        wsRef.current.onopen = () => {
-          const mediaRecorder = new MediaRecorder(stream);
-          mediaRecorderRef.current = mediaRecorder;
-          
-          mediaRecorder.ondataavailable = (event) => {
-            if (event.data.size > 0 && wsRef.current.readyState === 1) {
-              wsRef.current.send(event.data);
-            }
-          };
-
-          mediaRecorder.start(250);
-          setStatus('listening');
-        };
-
-        wsRef.current.onmessage = (message) => {
-          const received = JSON.parse(message.data);
-          const text = received.channel?.alternatives[0]?.transcript;
-          
-          if (text) {
-            if (received.is_final) {
-              setTranscript((prev) => prev ? prev + ' ' + text : text);
-              setPartialTranscript('');
-            } else {
-              setPartialTranscript(text);
-            }
-          }
-        };
-
-        wsRef.current.onerror = (err) => {
-          console.error('WebSocket error:', err);
-        };
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
       };
 
-      msg.onend = startRecordingNow;
-      msg.onerror = startRecordingNow;
-      setTimeout(startRecordingNow, 4000);
+      mediaRecorder.onstop = async () => {
+        setStatus('processing');
+        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+        const formData = new FormData();
+        formData.append('audio', audioBlob, 'emergency.webm');
 
-      window.speechSynthesis.speak(msg);
+        try {
+          const res = await fetch('/api/deepgram/transcribe', {
+            method: 'POST',
+            body: formData
+          });
+          const data = await res.json();
+          
+          if (data.success && data.transcript) {
+            setTranscript(data.transcript);
+            analyzeTranscript(data.transcript);
+          } else {
+            setStatus('unidentified');
+          }
+        } catch (err) {
+          console.error(err);
+          setFailMessage('Speech recognition failed.');
+          setStatus('failed');
+        }
+        
+        // Clean up stream tracks
+        stream.getTracks().forEach(t => t.stop());
+      };
+
+      mediaRecorder.start();
     } catch (e) {
       console.error('Mic access error:', e);
       alert('Microphone access denied or unavailable.');
     }
   };
 
-  const stopListening = (e) => {
-    if (e) e.preventDefault();
-    
-    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+  const stopListening = () => {
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
       mediaRecorderRef.current.stop();
-      mediaRecorderRef.current.stream.getTracks().forEach(t => t.stop());
     }
-    
-    if (wsRef.current) {
-      wsRef.current.close();
-    }
-    
-    setStatus('processing');
-    
-    setTimeout(() => {
-      setTranscript((finalText) => {
-        analyzeTranscript(finalText);
-        return finalText;
-      });
-    }, 500);
   };
 
   const analyzeTranscript = (text) => {
