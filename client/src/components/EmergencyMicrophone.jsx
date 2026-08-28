@@ -13,6 +13,7 @@ export function EmergencyMicrophone({ onCallConnected }) {
   const mediaRecorderRef = useRef(null);
   const wsRef = useRef(null);
   const msgRef = useRef(null);
+  const audioChunksRef = useRef([]);
 
   // Clean up on unmount
   useEffect(() => {
@@ -78,7 +79,7 @@ export function EmergencyMicrophone({ onCallConnected }) {
       mediaRecorder.start();
     } catch (e) {
       console.error('Mic access error:', e);
-      alert('Microphone access denied or unavailable.');
+      alert('Microphone Error: ' + e.name + ' - ' + e.message + '\n\nIf you gave permission, Windows might be blocking it or no mic is plugged in.');
     }
   };
 
