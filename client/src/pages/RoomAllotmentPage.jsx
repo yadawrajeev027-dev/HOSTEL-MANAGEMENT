@@ -3,7 +3,7 @@ import {
   Building, Users, DoorClosed, BedDouble, ArrowRight,
   Search, ShieldAlert, CheckCircle2, History
 } from 'lucide-react';
-import { allotmentApi, authApi } from '../api';
+import { allotmentApi, authApi, studentApi } from '../api';
 import { useAuth } from '../context/AuthContext';
 import { useNotifications } from '../context/NotificationContext';
 
@@ -46,12 +46,8 @@ export function RoomAllotmentPage() {
     try {
       if (activeTab === 'allot') {
         // Load students and hostels
-        const token = localStorage.getItem('hostel_token');
-        const stuRes = await fetch('http://localhost:5000/api/students', {
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-        const stuData = await stuRes.json();
-        setStudents(stuData.students || []);
+        const stuRes = await studentApi.getAll();
+        setStudents(stuRes.students || []);
 
         const hRes = await allotmentApi.getHostels();
         setHostels(hRes.hostels || []);

@@ -91,6 +91,19 @@ router.post('/student-register', (req, res) => {
     email: `${cleanRegNo.toLowerCase()}@college.edu`
   });
 
+  // Automatically Notify Chief Warden and Deputy Chief Warden
+  const admins = db.find('users', u => u.role === 'Chief Warden' || u.role === 'Deputy Chief Warden');
+  admins.forEach(admin => {
+    db.insert('notifications', {
+      userId: admin.id,
+      title: 'New Student Registration',
+      message: `${newUser.name} (${newUser.registrationNumber}) has just signed up and registered to ${assignedHostel}.`,
+      type: 'info',
+      read: false,
+      createdAt: new Date().toISOString()
+    });
+  });
+
   const token = generateToken(newUser);
   const { passwordHash: ph, ...userSafe } = newUser;
 

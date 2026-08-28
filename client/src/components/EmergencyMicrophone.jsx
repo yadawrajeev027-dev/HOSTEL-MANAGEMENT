@@ -19,7 +19,9 @@ export function EmergencyMicrophone({ onCallConnected }) {
     return () => {
       if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
         mediaRecorderRef.current.stop();
-        mediaRecorderRef.current.stream.getTracks().forEach(t => t.stop());
+        if (mediaRecorderRef.current.stream) {
+          mediaRecorderRef.current.stream.getTracks().forEach(t => t.stop());
+        }
       }
       if (wsRef.current) {
         wsRef.current.close();

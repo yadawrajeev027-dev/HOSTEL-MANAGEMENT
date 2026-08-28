@@ -151,7 +151,7 @@ export function FloorWardenDashboard({ setCurrentTab }) {
 
         <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
           <div className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase">Floor Students</div>
-          <div className="text-2xl font-black text-slate-900 dark:text-white mt-1 font-['Outfit']">{statsData?.stats?.totalStudents || 3}</div>
+          <div className="text-2xl font-black text-slate-900 dark:text-white mt-1 font-['Outfit']">{statsData?.stats?.totalStudents || 0}</div>
           <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">Assigned resident pool</p>
         </div>
       </div>

@@ -150,7 +150,7 @@ export function ChiefWardenDashboard({ setCurrentTab }) {
             <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Total Students</span>
             <Users className="w-4 h-4 text-brand-600" />
           </div>
-          <div className="text-3xl font-black text-slate-900 dark:text-white mt-2 font-['Outfit']">{stats.totalStudents || 4}</div>
+          <div className="text-3xl font-black text-slate-900 dark:text-white mt-2 font-['Outfit']">{stats.totalStudents || 0}</div>
           <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Enrolled students</p>
         </div>
 
@@ -168,7 +168,7 @@ export function ChiefWardenDashboard({ setCurrentTab }) {
             <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Total Residents</span>
             <Users className="w-4 h-4 text-brand-600" />
           </div>
-          <div className="text-3xl font-black text-slate-900 dark:text-white mt-2 font-['Outfit']">{stats.totalStudents || 4}</div>
+          <div className="text-3xl font-black text-slate-900 dark:text-white mt-2 font-['Outfit']">{stats.totalStudents || 0}</div>
           <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Enrolled students</p>
         </div>
 
@@ -177,8 +177,8 @@ export function ChiefWardenDashboard({ setCurrentTab }) {
             <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Hostels & Occupancy</span>
             <Building className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-3xl font-black text-emerald-600 mt-2 font-['Outfit']">{stats.occupancyRate || 92}%</div>
-          <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">{stats.totalOccupancy || 844} / {stats.totalCapacity || 900} beds filled</p>
+          <div className="text-3xl font-black text-emerald-600 mt-2 font-['Outfit']">{stats.occupancyRate || 0}%</div>
+          <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">{stats.totalOccupancy || 0} / {stats.totalCapacity || 0} beds filled</p>
         </div>
 
         <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">

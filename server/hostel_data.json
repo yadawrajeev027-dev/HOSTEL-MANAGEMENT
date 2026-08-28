@@ -20,7 +20,7 @@
       "createdAt": "2026-08-27T04:33:01.761Z",
       "name": "DR.SV FUNNY KUMAR",
       "username": "SVFUNNYDP",
-      "passwordHash": "$2a$10$LusRMm/cJYEWJlAEJjcCmOrgGdsJ1NT/RW8uLKyYdg9Dgq9amJqxq",
+      "passwordHash": "$2a$10$Az1zjSYk1z0llScJ5putNezsmvchr2eiNDjKp6S6sZMN2laSOfqGW",
       "role": "Deputy Chief Warden",
       "designation": "Floor Warden",
       "phone": "+91 87098965485",
@@ -28,7 +28,8 @@
       "assignedHostel": null,
       "assignedFloor": null,
       "assignedDepartment": null,
-      "avatar": ""
+      "avatar": "",
+      "updatedAt": "2026-08-28T08:09:12.869Z"
     },
     {
       "id": "501696b0-09dd-43d4-962d-dc9ec904bcfd",
@@ -70,12 +71,12 @@
       "year": "3rd Year",
       "branch": "B.Tech CSE",
       "section": "A",
-      "hostel": "SR-5 NEW BUILDING ",
-      "roomNumber": "203",
+      "hostel": "Unassigned",
+      "roomNumber": "Unassigned",
       "email": "241fa04d29@college.edu",
-      "floor": 2,
-      "bedNumber": "Bed 1",
-      "updatedAt": "2026-08-27T04:36:01.116Z"
+      "floor": null,
+      "bedNumber": "Unassigned",
+      "updatedAt": "2026-08-28T08:14:56.340Z"
     },
     {
       "id": "70a48a7a-e007-494a-b58a-7e39d28ce6e9",
@@ -89,12 +90,12 @@
       "year": "3rd Year",
       "branch": "B.Tech CSE",
       "section": "A",
-      "hostel": "SR-5 NEW BUILDING ",
-      "roomNumber": "403",
+      "hostel": "Unassigned",
+      "roomNumber": "Unassigned",
       "email": "241fa04e02@college.edu",
-      "floor": 4,
-      "bedNumber": "Bed 3",
-      "updatedAt": "2026-08-27T04:36:41.792Z"
+      "floor": null,
+      "bedNumber": "Unassigned",
+      "updatedAt": "2026-08-28T08:14:59.523Z"
     },
     {
       "id": "2b6df49c-ef7a-4768-be9e-a6cdbd2b7c8e",
@@ -140,12 +141,12 @@
       "year": "3rd Year",
       "branch": "B.Tech CSE",
       "section": "A",
-      "hostel": "SR-5 NEW BUILDING ",
-      "roomNumber": "204",
+      "hostel": "Unassigned",
+      "roomNumber": "Unassigned",
       "email": "241fa04f49@college.edu",
-      "floor": 2,
-      "bedNumber": "Bed 1",
-      "updatedAt": "2026-08-27T04:38:26.304Z"
+      "floor": null,
+      "bedNumber": "Unassigned",
+      "updatedAt": "2026-08-28T08:15:11.142Z"
     },
     {
       "id": "eeb40e9a-a4d2-42dd-96f7-895ff870d2f0",
@@ -178,12 +179,12 @@
       "year": "1st Year",
       "branch": "B.Tech CSE",
       "section": "A",
-      "hostel": "SR-5 NEW BUILDING ",
-      "roomNumber": "203",
+      "hostel": "Unassigned",
+      "roomNumber": "Unassigned",
       "email": "241fa04185@college.edu",
-      "floor": 2,
-      "bedNumber": "Bed 7",
-      "updatedAt": "2026-08-27T04:39:45.518Z"
+      "floor": null,
+      "bedNumber": "Unassigned",
+      "updatedAt": "2026-08-28T08:15:04.013Z"
     },
     {
       "id": "78f3eecd-6e53-4ec8-b9af-9c69fc67c8f9",
@@ -197,12 +198,12 @@
       "year": "1st Year",
       "branch": "B.Tech CSE",
       "section": "A",
-      "hostel": "SR-5 NEW BUILDING ",
-      "roomNumber": "203",
+      "hostel": "Unassigned",
+      "roomNumber": "Unassigned",
       "email": "241fa04192@college.edu",
-      "floor": 2,
-      "bedNumber": "Bed 6",
-      "updatedAt": "2026-08-27T04:40:05.781Z"
+      "floor": null,
+      "bedNumber": "Unassigned",
+      "updatedAt": "2026-08-28T08:15:06.894Z"
     },
     {
       "id": "usr_cw_admin",
@@ -549,7 +550,8 @@
       "title": "New Outpass Approval Required",
       "message": "Warden RAJUSR accepted Outpass (OP-2026-8801) for RAJEEV KUMAR. Requires your final approval.",
       "type": "OUTPASS_WARDEN_ACCEPTED",
-      "read": false
+      "read": true,
+      "updatedAt": "2026-08-28T08:08:26.687Z"
     },
     {
       "id": "215e5b03-bbe0-4ff8-b7c8-8f7b4421a81d",
@@ -1229,8 +1231,8 @@
       "status": "Active",
       "wardenName": "RAJU",
       "wardenId": "501696b0-09dd-43d4-962d-dc9ec904bcfd",
-      "occupiedBeds": 6,
-      "updatedAt": "2026-08-27T04:40:05.774Z"
+      "occupiedBeds": 1,
+      "updatedAt": "2026-08-28T08:15:11.117Z"
     },
     {
       "id": "8bda3feb-f221-4b33-9bfc-496f30280b34",
@@ -6122,10 +6124,10 @@
       "hostelId": "39200409-a4fb-4de6-89b1-ae44014093b6",
       "floorNumber": 4,
       "bedNumber": "Bed 3",
-      "status": "Occupied",
-      "studentId": "70a48a7a-e007-494a-b58a-7e39d28ce6e9",
-      "studentName": "KRISH NAVIN SINGH",
-      "updatedAt": "2026-08-27T04:36:41.775Z"
+      "status": "Available",
+      "studentId": null,
+      "studentName": null,
+      "updatedAt": "2026-08-28T08:14:59.489Z"
     },
     {
       "id": "974e9d56-cbcc-49be-b59a-313d298902b0",
@@ -6987,10 +6989,10 @@
       "hostelId": "39200409-a4fb-4de6-89b1-ae44014093b6",
       "floorNumber": 2,
       "bedNumber": "Bed 1",
-      "status": "Occupied",
-      "studentId": "4e528d66-38a4-40ab-974a-81009bb472e1",
-      "studentName": "PANKAJ",
-      "updatedAt": "2026-08-27T04:38:26.292Z"
+      "status": "Available",
+      "studentId": null,
+      "studentName": null,
+      "updatedAt": "2026-08-28T08:15:11.098Z"
     },
     {
       "id": "f1c2d8fa-e333-48df-a19b-96247396ee81",
@@ -7036,10 +7038,10 @@
       "hostelId": "39200409-a4fb-4de6-89b1-ae44014093b6",
       "floorNumber": 2,
       "bedNumber": "Bed 7",
-      "status": "Occupied",
-      "studentId": "e0b33a81-739e-4836-a6e0-6515b1cc3b04",
-      "studentName": "PRAYASH KUMAR",
-      "updatedAt": "2026-08-27T04:39:45.489Z"
+      "status": "Available",
+      "studentId": null,
+      "studentName": null,
+      "updatedAt": "2026-08-28T08:15:03.990Z"
     },
     {
       "id": "599c0b39-5e81-4113-aff4-3dfb607a221e",
@@ -7049,10 +7051,10 @@
       "hostelId": "39200409-a4fb-4de6-89b1-ae44014093b6",
       "floorNumber": 2,
       "bedNumber": "Bed 6",
-      "status": "Occupied",
-      "studentId": "78f3eecd-6e53-4ec8-b9af-9c69fc67c8f9",
-      "studentName": "RAJEEV KUMAR",
-      "updatedAt": "2026-08-27T04:40:05.767Z"
+      "status": "Available",
+      "studentId": null,
+      "studentName": null,
+      "updatedAt": "2026-08-28T08:15:06.872Z"
     },
     {
       "id": "526fbd1b-aadf-489c-bbb9-d54eded112b1",
@@ -7111,10 +7113,10 @@
       "hostelId": "39200409-a4fb-4de6-89b1-ae44014093b6",
       "floorNumber": 2,
       "bedNumber": "Bed 1",
-      "status": "Occupied",
-      "studentId": "6c1021bc-0394-4081-ad95-e828162a8560",
-      "studentName": "ANISH SINGH",
-      "updatedAt": "2026-08-27T04:36:01.100Z"
+      "status": "Available",
+      "studentId": null,
+      "studentName": null,
+      "updatedAt": "2026-08-28T08:14:56.319Z"
     },
     {
       "id": "00c6a494-e132-4436-af86-79d43feeb2fb",
@@ -19842,6 +19844,86 @@
     }
   ],
   "allotmentHistory": [
+    {
+      "id": "02b694b7-61d3-4e93-9d39-985e8e82f841",
+      "createdAt": "2026-08-28T08:15:11.158Z",
+      "studentId": "4e528d66-38a4-40ab-974a-81009bb472e1",
+      "studentName": "PANKAJ",
+      "action": "REMOVED",
+      "oldBedDetails": {
+        "hostel": "SR-5 NEW BUILDING ",
+        "floor": 2,
+        "roomNumber": "204",
+        "bedNumber": "Bed 1"
+      },
+      "newBedDetails": null,
+      "date": "2026-08-28T08:15:11.158Z",
+      "changedBy": "DR.SV FUNNY KUMAR"
+    },
+    {
+      "id": "710e22b1-49bb-47e0-b06f-9b4f9b8bbbe7",
+      "createdAt": "2026-08-28T08:15:06.916Z",
+      "studentId": "78f3eecd-6e53-4ec8-b9af-9c69fc67c8f9",
+      "studentName": "RAJEEV KUMAR",
+      "action": "REMOVED",
+      "oldBedDetails": {
+        "hostel": "SR-5 NEW BUILDING ",
+        "floor": 2,
+        "roomNumber": "203",
+        "bedNumber": "Bed 6"
+      },
+      "newBedDetails": null,
+      "date": "2026-08-28T08:15:06.916Z",
+      "changedBy": "DR.SV FUNNY KUMAR"
+    },
+    {
+      "id": "1ace8eb3-9638-4df8-b9c6-5f8aca63cca8",
+      "createdAt": "2026-08-28T08:15:04.035Z",
+      "studentId": "e0b33a81-739e-4836-a6e0-6515b1cc3b04",
+      "studentName": "PRAYASH KUMAR",
+      "action": "REMOVED",
+      "oldBedDetails": {
+        "hostel": "SR-5 NEW BUILDING ",
+        "floor": 2,
+        "roomNumber": "203",
+        "bedNumber": "Bed 7"
+      },
+      "newBedDetails": null,
+      "date": "2026-08-28T08:15:04.035Z",
+      "changedBy": "DR.SV FUNNY KUMAR"
+    },
+    {
+      "id": "b00508d5-f976-4fcb-821a-0753bede1f35",
+      "createdAt": "2026-08-28T08:14:59.539Z",
+      "studentId": "70a48a7a-e007-494a-b58a-7e39d28ce6e9",
+      "studentName": "KRISH NAVIN SINGH",
+      "action": "REMOVED",
+      "oldBedDetails": {
+        "hostel": "SR-5 NEW BUILDING ",
+        "floor": 4,
+        "roomNumber": "403",
+        "bedNumber": "Bed 3"
+      },
+      "newBedDetails": null,
+      "date": "2026-08-28T08:14:59.538Z",
+      "changedBy": "DR.SV FUNNY KUMAR"
+    },
+    {
+      "id": "8dc70069-542f-4454-a9df-ac1b34e5c242",
+      "createdAt": "2026-08-28T08:14:56.369Z",
+      "studentId": "6c1021bc-0394-4081-ad95-e828162a8560",
+      "studentName": "ANISH SINGH",
+      "action": "REMOVED",
+      "oldBedDetails": {
+        "hostel": "SR-5 NEW BUILDING ",
+        "floor": 2,
+        "roomNumber": "203",
+        "bedNumber": "Bed 1"
+      },
+      "newBedDetails": null,
+      "date": "2026-08-28T08:14:56.366Z",
+      "changedBy": "DR.SV FUNNY KUMAR"
+    },
     {
       "id": "630be6a7-1c82-4d10-b151-fd6085c09f61",
       "createdAt": "2026-08-27T04:40:05.788Z",
