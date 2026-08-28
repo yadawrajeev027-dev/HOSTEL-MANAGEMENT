@@ -1,4 +1,4 @@
-const API_BASE = 'https://hostel-management-kdzc.onrender.com';
+const API_BASE = 'https://hostel-management-kdzc.onrender.com/api';
 
 function getAuthHeader() {
   const token = localStorage.getItem('hostel_token');
