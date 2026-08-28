@@ -2,4 +2,6 @@ node_modules/
 .env
 .env.local
 dist/
-build/
+build/hostel_data.json
+proxy.log
+*.tmp
