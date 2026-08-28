@@ -18,27 +18,22 @@ router.post('/transcribe', upload.single('audio'), async (req, res) => {
     }
 
     // Initialize Deepgram Client inside the route so it always grabs the latest key from env
-    const deepgram = createClient(apiKey);
+    console.log(`[DEEPGRAM DEBUG] Sending audio to Deepgram REST API. Buffer size: ${req.file.buffer.length} bytes, Mimetype: ${req.file.mimetype}`);
 
-    // Call Deepgram SDK to transcribe the audio buffer
-    const payload = {
-      buffer: req.file.buffer,
-      mimetype: req.file.mimetype || 'audio/webm'
-    };
+    const response = await fetch('https://api.deepgram.com/v1/listen?model=nova-2&smart_format=true', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Token ${apiKey}`,
+        'Content-Type': req.file.mimetype || 'audio/webm'
+      },
+      body: req.file.buffer
+    });
 
-    console.log(`[DEEPGRAM DEBUG] Sending audio to Deepgram. Buffer size: ${req.file.buffer.length} bytes, Mimetype: ${payload.mimetype}`);
+    const result = await response.json();
 
-    const { result, error } = await deepgram.listen.prerecorded.transcribeFile(
-      payload,
-      {
-        model: 'nova-2',
-        smart_format: true,
-      }
-    );
-
-    if (error) {
-      console.error('Deepgram API Error:', error);
-      return res.status(500).json({ error: 'Speech-to-text failed: ' + (error.message || JSON.stringify(error)) });
+    if (!response.ok) {
+      console.error('Deepgram API Error:', result);
+      return res.status(500).json({ error: 'Speech-to-text failed: ' + (result.err_msg || JSON.stringify(result)) });
     }
 
     // Extract the transcribed text
