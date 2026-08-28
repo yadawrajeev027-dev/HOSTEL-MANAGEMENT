@@ -19,7 +19,7 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { outpassApi } from '../api';
+import { outpassApi, wardenApi } from '../api';
 import { StatusBadge } from '../components/StatusBadge';
 import { DigitalOutpassModal } from '../components/DigitalOutpassModal';
 import { useNotifications } from '../context/NotificationContext';
@@ -77,11 +77,7 @@ export function OutpassPage() {
 
   const loadWardensList = async () => {
     try {
-      const token = localStorage.getItem('hostel_token');
-      const res = await fetch('http://localhost:5000/api/wardens', {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      const data = await res.json();
+      const data = await wardenApi.getAll();
       if (data.wardens) {
         setWardensList(data.wardens.filter(w => w.role === 'Floor Warden'));
       }
