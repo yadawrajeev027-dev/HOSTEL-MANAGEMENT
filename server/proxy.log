@@ -1,0 +1,321 @@
+[2026-08-27T06:39:14.259Z] New frontend connection
+[2026-08-27T06:39:14.730Z] Buffered chunk of size 4026
+[2026-08-27T06:39:14.887Z] Buffered chunk of size 4846
+[2026-08-27T06:39:15.181Z] Buffered chunk of size 4846
+[2026-08-27T06:39:15.507Z] Buffered chunk of size 4846
+[2026-08-27T06:39:15.785Z] Buffered chunk of size 4846
+[2026-08-27T06:39:15.980Z] Deepgram Open. Flushing 5 chunks.
+[2026-08-27T06:39:17.976Z] Deepgram Transcript: "As a water leak." (is_final: true)
+[2026-08-27T06:39:19.938Z] Deepgram Transcript: "I have water leak." (is_final: true)
+[2026-08-27T06:39:25.857Z] Deepgram Transcript: "Connect it to water issues." (is_final: true)
+[2026-08-27T06:39:30.694Z] Frontend WS closed. Total bytes sent to DG: 258932
+[2026-08-27T06:39:57.476Z] New frontend connection
+[2026-08-27T06:39:57.795Z] Buffered chunk of size 4026
+[2026-08-27T06:39:58.100Z] Buffered chunk of size 4846
+[2026-08-27T06:39:58.404Z] Buffered chunk of size 4846
+[2026-08-27T06:39:58.697Z] Buffered chunk of size 4846
+[2026-08-27T06:39:59.012Z] Buffered chunk of size 4846
+[2026-08-27T06:39:59.299Z] Buffered chunk of size 4846
+[2026-08-27T06:39:59.597Z] Buffered chunk of size 4846
+[2026-08-27T06:39:59.904Z] Buffered chunk of size 4846
+[2026-08-27T06:39:59.951Z] Deepgram Open. Flushing 8 chunks.
+[2026-08-27T06:40:03.530Z] Deepgram Transcript: "Connect call to the health system." (is_final: true)
+[2026-08-27T06:40:05.840Z] Deepgram Transcript: "Connect call to health issue." (is_final: true)
+[2026-08-27T06:40:12.745Z] Frontend WS closed. Total bytes sent to DG: 245360
+[2026-08-27T06:45:52.280Z] New frontend connection
+[2026-08-27T06:45:52.622Z] Buffered chunk of size 4026
+[2026-08-27T06:45:52.895Z] Buffered chunk of size 4846
+[2026-08-27T06:45:53.204Z] Buffered chunk of size 4846
+[2026-08-27T06:45:53.493Z] Buffered chunk of size 4846
+[2026-08-27T06:45:53.764Z] Deepgram Open. Flushing 4 chunks.
+[2026-08-27T06:45:56.508Z] Deepgram Transcript: "Call Health Center." (is_final: true)
+[2026-08-27T06:46:01.311Z] Frontend WS closed. Total bytes sent to DG: 138748
+[2026-08-27T06:51:17.106Z] New frontend connection
+[2026-08-27T06:51:17.421Z] Buffered chunk of size 4026
+[2026-08-27T06:51:17.720Z] Buffered chunk of size 4846
+[2026-08-27T06:51:18.021Z] Buffered chunk of size 4846
+[2026-08-27T06:51:18.316Z] Buffered chunk of size 4846
+[2026-08-27T06:51:18.619Z] Buffered chunk of size 4846
+[2026-08-27T06:51:18.924Z] Buffered chunk of size 4846
+[2026-08-27T06:51:19.214Z] Buffered chunk of size 4846
+[2026-08-27T06:51:19.518Z] Buffered chunk of size 4846
+[2026-08-27T06:51:19.820Z] Buffered chunk of size 4846
+[2026-08-27T06:51:20.120Z] Buffered chunk of size 4846
+[2026-08-27T06:51:20.421Z] Buffered chunk of size 4846
+[2026-08-27T06:51:20.723Z] Buffered chunk of size 4846
+[2026-08-27T06:51:21.025Z] Buffered chunk of size 4846
+[2026-08-27T06:51:21.288Z] Deepgram Open. Flushing 13 chunks.
+[2026-08-27T06:51:24.970Z] Deepgram Transcript: "I want a call to the health center." (is_final: true)
+[2026-08-27T06:51:28.425Z] Frontend WS closed. Total bytes sent to DG: 178482
+[2026-08-27T06:51:28.867Z] Deepgram Transcript: "I want" (is_final: true)
+[2026-08-27T07:00:14.530Z] New frontend connection
+[2026-08-27T07:00:14.864Z] Buffered chunk of size 4026
+[2026-08-27T07:00:15.151Z] Buffered chunk of size 4846
+[2026-08-27T07:00:15.453Z] Buffered chunk of size 4846
+[2026-08-27T07:00:15.677Z] Deepgram Open. Flushing 3 chunks.
+[2026-08-27T07:00:18.392Z] Deepgram Transcript: "All to the health center." (is_final: true)
+[2026-08-27T07:00:26.333Z] Frontend WS closed. Total bytes sent to DG: 187208
+[2026-08-27T07:16:57.860Z] New frontend connection
+[2026-08-27T07:16:58.200Z] Buffered chunk of size 4026
+[2026-08-27T07:16:58.495Z] Buffered chunk of size 4846
+[2026-08-27T07:16:58.788Z] Buffered chunk of size 4846
+[2026-08-27T07:16:59.083Z] Buffered chunk of size 4846
+[2026-08-27T07:16:59.379Z] Buffered chunk of size 4846
+[2026-08-27T07:16:59.682Z] Buffered chunk of size 4846
+[2026-08-27T07:16:59.986Z] Buffered chunk of size 4846
+[2026-08-27T07:17:00.279Z] Buffered chunk of size 4846
+[2026-08-27T07:17:00.651Z] Buffered chunk of size 4846
+[2026-08-27T07:17:00.880Z] Buffered chunk of size 4846
+[2026-08-27T07:17:01.184Z] Buffered chunk of size 4846
+[2026-08-27T07:17:01.481Z] Buffered chunk of size 4846
+[2026-08-27T07:17:01.785Z] Buffered chunk of size 4846
+[2026-08-27T07:17:01.924Z] Deepgram Open. Flushing 13 chunks.
+[2026-08-27T07:17:03.965Z] Deepgram Transcript: "Then it's called to health centers." (is_final: true)
+[2026-08-27T07:17:04.599Z] Frontend WS closed. Total bytes sent to DG: 105792
+[2026-08-27T07:17:34.324Z] New frontend connection
+[2026-08-27T07:17:34.627Z] Buffered chunk of size 4026
+[2026-08-27T07:17:34.936Z] Buffered chunk of size 3880
+[2026-08-27T07:17:35.167Z] Buffered chunk of size 4846
+[2026-08-27T07:17:35.466Z] Buffered chunk of size 4846
+[2026-08-27T07:17:35.764Z] Buffered chunk of size 4846
+[2026-08-27T07:17:36.064Z] Buffered chunk of size 4846
+[2026-08-27T07:17:36.365Z] Buffered chunk of size 4846
+[2026-08-27T07:17:36.459Z] Deepgram Open. Flushing 7 chunks.
+[2026-08-27T07:17:56.769Z] Deepgram Transcript: "Yes. You have submitted the reduced" (is_final: true)
+[2026-08-27T07:18:04.255Z] Deepgram Transcript: "direct into the health center. The UI, skip the." (is_final: true)
+[2026-08-27T07:18:04.552Z] Deepgram Transcript: "Start the dialing of the call." (is_final: true)
+[2026-08-27T07:18:06.056Z] Deepgram Transcript: "For success." (is_final: true)
+[2026-08-27T07:19:20.152Z] Deepgram Transcript: "We had a successful" (is_final: true)
+[2026-08-27T07:19:44.093Z] New frontend connection
+[2026-08-27T07:19:44.427Z] Buffered chunk of size 4026
+[2026-08-27T07:19:44.715Z] Buffered chunk of size 4846
+[2026-08-27T07:19:45.021Z] Buffered chunk of size 4846
+[2026-08-27T07:19:45.337Z] Buffered chunk of size 4846
+[2026-08-27T07:19:45.501Z] Deepgram Open. Flushing 4 chunks.
+[2026-08-27T07:19:48.038Z] Deepgram Transcript: "Connect call to health center." (is_final: true)
+[2026-08-27T07:19:55.340Z] Frontend WS closed. Total bytes sent to DG: 176550
+[2026-08-27T07:36:56.742Z] New frontend connection
+[2026-08-27T07:36:57.133Z] Buffered chunk of size 4026
+[2026-08-27T07:36:57.378Z] Buffered chunk of size 4846
+[2026-08-27T07:36:57.697Z] Buffered chunk of size 4846
+[2026-08-27T07:36:57.979Z] Buffered chunk of size 4846
+[2026-08-27T07:36:58.356Z] Buffered chunk of size 4846
+[2026-08-27T07:36:58.584Z] Buffered chunk of size 4846
+[2026-08-27T07:36:58.790Z] Deepgram Open. Flushing 6 chunks.
+[2026-08-27T07:37:02.732Z] Deepgram Transcript: "Call to their health center." (is_final: true)
+[2026-08-27T07:37:04.748Z] Frontend WS closed. Total bytes sent to DG: 124210
+[2026-08-27T08:24:53.795Z] New frontend connection
+[2026-08-27T08:24:55.113Z] Buffered chunk of size 1
+[2026-08-27T08:24:55.230Z] Buffered chunk of size 4359
+[2026-08-27T08:24:55.381Z] Buffered chunk of size 4846
+[2026-08-27T08:24:55.656Z] Buffered chunk of size 4846
+[2026-08-27T08:24:55.951Z] Buffered chunk of size 4846
+[2026-08-27T08:24:56.239Z] Buffered chunk of size 4846
+[2026-08-27T08:24:56.598Z] Buffered chunk of size 4846
+[2026-08-27T08:24:56.860Z] Buffered chunk of size 4846
+[2026-08-27T08:24:57.197Z] Deepgram Open. Flushing 8 chunks.
+[2026-08-27T08:25:00.487Z] Deepgram Transcript: "Please tell me" (is_final: true)
+[2026-08-27T08:25:03.138Z] Deepgram Transcript: "what emergency service do you need?" (is_final: true)
+[2026-08-27T08:25:04.271Z] Deepgram Transcript: "Please call to the health center." (is_final: true)
+[2026-08-27T08:25:12.098Z] Frontend WS closed. Total bytes sent to DG: 278650
+[2026-08-27T08:28:42.798Z] New frontend connection
+[2026-08-27T08:28:43.073Z] Buffered chunk of size 3060
+[2026-08-27T08:28:43.376Z] Buffered chunk of size 4846
+[2026-08-27T08:28:43.667Z] Buffered chunk of size 4846
+[2026-08-27T08:28:43.991Z] Buffered chunk of size 4846
+[2026-08-27T08:28:44.135Z] Deepgram Open. Flushing 4 chunks.
+[2026-08-27T08:28:46.381Z] Deepgram Transcript: "All to the hostel issue." (is_final: true)
+[2026-08-27T08:28:48.227Z] Frontend WS closed. Total bytes sent to DG: 84476
+[2026-08-27T09:07:26.580Z] New frontend connection
+[2026-08-27T09:07:28.166Z] Buffered chunk of size 1
+[2026-08-27T09:07:28.181Z] Buffered chunk of size 6939
+[2026-08-27T09:07:28.207Z] Buffered chunk of size 4846
+[2026-08-27T09:07:28.227Z] Buffered chunk of size 4846
+[2026-08-27T09:07:28.244Z] Buffered chunk of size 3880
+[2026-08-27T09:07:28.321Z] Buffered chunk of size 4846
+[2026-08-27T09:07:28.605Z] Buffered chunk of size 4846
+[2026-08-27T09:07:28.896Z] Buffered chunk of size 4846
+[2026-08-27T09:07:29.202Z] Buffered chunk of size 4846
+[2026-08-27T09:07:29.777Z] Buffered chunk of size 4846
+[2026-08-27T09:07:29.795Z] Buffered chunk of size 4846
+[2026-08-27T09:07:30.187Z] Buffered chunk of size 4846
+[2026-08-27T09:07:30.626Z] Buffered chunk of size 4846
+[2026-08-27T09:07:30.773Z] Buffered chunk of size 5812
+[2026-08-27T09:07:31.077Z] Buffered chunk of size 4846
+[2026-08-27T09:07:31.423Z] Buffered chunk of size 4846
+[2026-08-27T09:07:31.636Z] Buffered chunk of size 3880
+[2026-08-27T09:07:32.737Z] Deepgram Open. Flushing 17 chunks.
+[2026-08-27T09:07:37.435Z] Deepgram Transcript: "This key was a meeting." (is_final: true)
+[2026-08-27T09:07:43.282Z] Frontend WS closed. Total bytes sent to DG: 265710
+[2026-08-27T09:07:56.320Z] New frontend connection
+[2026-08-27T09:07:56.667Z] Buffered chunk of size 4026
+[2026-08-27T09:07:56.979Z] Buffered chunk of size 4846
+[2026-08-27T09:07:57.298Z] Buffered chunk of size 4846
+[2026-08-27T09:07:57.566Z] Buffered chunk of size 4846
+[2026-08-27T09:07:57.895Z] Buffered chunk of size 4846
+[2026-08-27T09:07:57.941Z] Deepgram Open. Flushing 5 chunks.
+[2026-08-27T09:08:01.181Z] Deepgram Transcript: "Please call to the health center." (is_final: true)
+[2026-08-27T09:08:03.415Z] Frontend WS closed. Total bytes sent to DG: 109672
+[2026-08-27T09:08:35.794Z] New frontend connection
+[2026-08-27T09:08:37.042Z] Buffered chunk of size 1
+[2026-08-27T09:08:37.319Z] Buffered chunk of size 3393
+[2026-08-27T09:08:37.606Z] Buffered chunk of size 4846
+[2026-08-27T09:08:37.918Z] Buffered chunk of size 4846
+[2026-08-27T09:08:38.184Z] Buffered chunk of size 4846
+[2026-08-27T09:08:38.486Z] Buffered chunk of size 4846
+[2026-08-27T09:08:38.786Z] Buffered chunk of size 4846
+[2026-08-27T09:08:39.074Z] Buffered chunk of size 4846
+[2026-08-27T09:08:39.189Z] Deepgram Open. Flushing 8 chunks.
+[2026-08-27T09:08:41.822Z] Deepgram Transcript: "The motion is so light." (is_final: true)
+[2026-08-27T09:08:45.823Z] Deepgram Transcript: "Please call to the hostel issue." (is_final: true)
+[2026-08-27T09:09:22.277Z] Frontend WS closed. Total bytes sent to DG: 727396
+[2026-08-27T09:19:08.643Z] New frontend connection
+[2026-08-27T09:19:10.017Z] Deepgram Open. Flushing 0 chunks.
+[2026-08-27T09:19:16.455Z] Deepgram Transcript: "Please open the profile." (is_final: true)
+[2026-08-27T09:19:21.279Z] Deepgram Transcript: "Edit profile." (is_final: true)
+[2026-08-27T09:19:26.591Z] Deepgram Transcript: "Just to deck" (is_final: true)
+[2026-08-27T09:19:41.231Z] Deepgram Transcript: "File a complaint" (is_final: true)
+[2026-08-27T09:19:48.505Z] Deepgram Transcript: "submit a new complaint," (is_final: true)
+[2026-08-27T09:19:56.324Z] Deepgram Transcript: "My Asus fan is not working." (is_final: true)
+[2026-08-27T09:20:06.632Z] Deepgram Transcript: "Just write a description and not working and dispatch the call." (is_final: true)
+[2026-08-27T09:20:13.183Z] Deepgram Transcript: "Dispatch. Submit the" (is_final: true)
+[2026-08-27T09:20:28.345Z] Deepgram Transcript: "the." (is_final: true)
+[2026-08-27T09:20:42.627Z] Deepgram Transcript: "Show students." (is_final: true)
+[2026-08-27T09:20:55.692Z] Deepgram Transcript: "Just to go with" (is_final: true)
+[2026-08-27T09:21:13.914Z] Deepgram Transcript: "We go to the dashboard." (is_final: true)
+[2026-08-27T09:21:21.387Z] Deepgram Transcript: "Just" (is_final: true)
+[2026-08-27T09:21:40.960Z] Deepgram Transcript: "I complained about the fan." (is_final: true)
+[2026-08-27T09:21:58.043Z] Deepgram Transcript: "Apply for an out pass." (is_final: true)
+[2026-08-27T09:22:10.336Z] Deepgram Transcript: "Where is my verified outbound?" (is_final: true)
+[2026-08-27T09:22:26.104Z] Deepgram Transcript: "Highly complaint about the fan." (is_final: true)
+[2026-08-27T09:22:41.707Z] Deepgram Transcript: "Highly complaint about the fan." (is_final: true)
+[2026-08-27T09:22:56.409Z] Deepgram Transcript: "My profile." (is_final: true)
+[2026-08-27T09:23:02.347Z] Deepgram Transcript: "Notification." (is_final: true)
+[2026-08-27T09:23:07.883Z] Deepgram Transcript: "Complaint," (is_final: true)
+[2026-08-27T09:23:20.899Z] Deepgram Transcript: "open the complaints," (is_final: true)
+[2026-08-27T09:23:27.592Z] Frontend WS closed. Total bytes sent to DG: 1477948
+[2026-08-27T09:23:32.882Z] New frontend connection
+[2026-08-27T09:23:32.998Z] Frontend WS closed. Total bytes sent to DG: 0
+[2026-08-27T09:23:36.561Z] Deepgram Open. Flushing 0 chunks.
+[2026-08-27T16:27:28.835Z] New frontend connection
+[2026-08-27T16:27:30.280Z] Deepgram Open. Flushing 0 chunks.
+[2026-08-27T16:27:36.762Z] Deepgram Transcript: "Open the call modes." (is_final: true)
+[2026-08-27T16:27:44.825Z] Deepgram Transcript: "Open call, which" (is_final: true)
+[2026-08-27T16:27:48.763Z] Deepgram Transcript: "call booth." (is_final: true)
+[2026-08-27T16:27:58.329Z] Deepgram Transcript: "Just open the call." (is_final: true)
+[2026-08-27T16:28:03.121Z] Deepgram Transcript: "Open." (is_final: true)
+[2026-08-27T16:28:04.653Z] Deepgram Transcript: "Profile" (is_final: true)
+[2026-08-27T16:28:10.164Z] Frontend WS closed. Total bytes sent to DG: 572324
+[2026-08-27T16:28:12.772Z] New frontend connection
+[2026-08-27T16:28:14.686Z] Deepgram Open. Flushing 0 chunks.
+[2026-08-27T16:28:21.667Z] Deepgram Transcript: "Notification." (is_final: true)
+[2026-08-27T16:28:28.260Z] Frontend WS closed. Total bytes sent to DG: 179448
+[2026-08-28T03:50:04.433Z] New frontend connection
+[2026-08-28T03:50:05.482Z] Buffered chunk of size 1
+[2026-08-28T03:50:09.575Z] Buffered chunk of size 495
+[2026-08-28T03:50:09.873Z] Buffered chunk of size 4846
+[2026-08-28T03:50:10.174Z] Buffered chunk of size 4846
+[2026-08-28T03:50:10.478Z] Buffered chunk of size 4846
+[2026-08-28T03:50:10.772Z] Buffered chunk of size 4846
+[2026-08-28T03:50:11.073Z] Buffered chunk of size 4846
+[2026-08-28T03:50:11.246Z] Deepgram Open. Flushing 7 chunks.
+[2026-08-28T03:50:14.601Z] Deepgram Transcript: "Okay. Okay. Noted in this one." (is_final: true)
+[2026-08-28T03:50:18.698Z] Deepgram Transcript: "Notification." (is_final: true)
+[2026-08-28T03:50:25.129Z] Frontend WS closed. Total bytes sent to DG: 247642
+[2026-08-28T03:50:35.824Z] New frontend connection
+[2026-08-28T03:50:36.151Z] Buffered chunk of size 4026
+[2026-08-28T03:50:36.458Z] Buffered chunk of size 4846
+[2026-08-28T03:50:36.749Z] Buffered chunk of size 4846
+[2026-08-28T03:50:37.044Z] Buffered chunk of size 4846
+[2026-08-28T03:50:37.355Z] Buffered chunk of size 4846
+[2026-08-28T03:50:37.654Z] Buffered chunk of size 4846
+[2026-08-28T03:50:37.958Z] Buffered chunk of size 4846
+[2026-08-28T03:50:38.284Z] Buffered chunk of size 4846
+[2026-08-28T03:50:38.570Z] Buffered chunk of size 4846
+[2026-08-28T03:50:38.872Z] Buffered chunk of size 4846
+[2026-08-28T03:50:39.162Z] Buffered chunk of size 4846
+[2026-08-28T03:50:39.459Z] Buffered chunk of size 4846
+[2026-08-28T03:50:39.754Z] Buffered chunk of size 4846
+[2026-08-28T03:50:39.794Z] Deepgram Open. Flushing 13 chunks.
+[2026-08-28T03:50:45.199Z] Deepgram Transcript: "I" (is_final: true)
+[2026-08-28T03:50:47.885Z] Deepgram Transcript: "Excuse me?" (is_final: true)
+[2026-08-28T03:50:49.508Z] Deepgram Transcript: "All health center." (is_final: true)
+[2026-08-28T03:50:55.258Z] Deepgram Transcript: "Call health center." (is_final: true)
+[2026-08-28T03:50:56.582Z] Frontend WS closed. Total bytes sent to DG: 330656
+[2026-08-28T03:54:50.921Z] New frontend connection
+[2026-08-28T03:54:51.685Z] Buffered chunk of size 1
+[2026-08-28T03:54:51.786Z] Buffered chunk of size 5340
+[2026-08-28T03:54:52.085Z] Buffered chunk of size 3880
+[2026-08-28T03:54:52.353Z] Buffered chunk of size 4846
+[2026-08-28T03:54:52.631Z] Buffered chunk of size 4846
+[2026-08-28T03:54:52.933Z] Buffered chunk of size 4846
+[2026-08-28T03:54:53.233Z] Buffered chunk of size 4846
+[2026-08-28T03:54:53.559Z] Buffered chunk of size 3864
+[2026-08-28T03:54:53.844Z] Buffered chunk of size 5828
+[2026-08-28T03:54:54.593Z] Buffered chunk of size 4846
+[2026-08-28T03:54:54.611Z] Buffered chunk of size 4846
+[2026-08-28T03:54:54.795Z] Buffered chunk of size 3864
+[2026-08-28T03:54:55.840Z] Deepgram Open. Flushing 12 chunks.
+[2026-08-28T03:54:58.136Z] Deepgram Transcript: "Please tell me" (is_final: true)
+[2026-08-28T03:54:59.961Z] Deepgram Transcript: "what did your Tucson service pay you wanna" (is_final: true)
+[2026-08-28T03:55:02.676Z] Deepgram Transcript: "Altu Health Center. Please tell me." (is_final: true)
+[2026-08-28T03:55:04.395Z] Deepgram Transcript: "For emergencies." (is_final: true)
+[2026-08-28T03:55:26.099Z] Frontend WS closed. Total bytes sent to DG: 554871
+[2026-08-28T03:55:33.580Z] New frontend connection
+[2026-08-28T03:55:33.906Z] Buffered chunk of size 4026
+[2026-08-28T03:55:34.213Z] Buffered chunk of size 4846
+[2026-08-28T03:55:34.496Z] Buffered chunk of size 3880
+[2026-08-28T03:55:34.752Z] Buffered chunk of size 4846
+[2026-08-28T03:55:35.087Z] Buffered chunk of size 4846
+[2026-08-28T03:55:35.355Z] Buffered chunk of size 4846
+[2026-08-28T03:55:35.647Z] Buffered chunk of size 4846
+[2026-08-28T03:55:35.948Z] Buffered chunk of size 4846
+[2026-08-28T03:55:36.265Z] Deepgram Open. Flushing 8 chunks.
+[2026-08-28T03:55:40.760Z] Deepgram Transcript: "Call to health center." (is_final: true)
+[2026-08-28T03:55:42.450Z] Frontend WS closed. Total bytes sent to DG: 136816
+[2026-08-28T04:09:26.253Z] New frontend connection
+[2026-08-28T04:09:26.444Z] New frontend connection
+[2026-08-28T04:09:26.569Z] Buffered chunk of size 4026
+[2026-08-28T04:09:26.746Z] Buffered chunk of size 4026
+[2026-08-28T04:09:27.048Z] Buffered chunk of size 4846
+[2026-08-28T04:09:27.346Z] Buffered chunk of size 4846
+[2026-08-28T04:09:27.643Z] Buffered chunk of size 4846
+[2026-08-28T04:09:27.942Z] Buffered chunk of size 4846
+[2026-08-28T04:09:28.241Z] Buffered chunk of size 4846
+[2026-08-28T04:09:28.541Z] Buffered chunk of size 4846
+[2026-08-28T04:09:28.841Z] Buffered chunk of size 4846
+[2026-08-28T04:09:29.141Z] Buffered chunk of size 4846
+[2026-08-28T04:09:29.445Z] Buffered chunk of size 4846
+[2026-08-28T04:09:29.593Z] Deepgram Open. Flushing 1 chunks.
+[2026-08-28T04:09:29.741Z] Buffered chunk of size 4846
+[2026-08-28T04:09:30.041Z] Buffered chunk of size 4846
+[2026-08-28T04:09:30.342Z] Buffered chunk of size 4846
+[2026-08-28T04:09:30.643Z] Buffered chunk of size 4846
+[2026-08-28T04:09:30.889Z] Deepgram Open. Flushing 14 chunks.
+[2026-08-28T04:09:38.061Z] Deepgram Transcript: "Open profile." (is_final: true)
+[2026-08-28T04:09:40.323Z] Deepgram Transcript: "Open profile." (is_final: true)
+[2026-08-28T04:09:40.645Z] Deepgram Transcript: "Open profile." (is_final: true)
+[2026-08-28T04:09:41.127Z] Deepgram Transcript: "Resume in balance." (is_final: true)
+[2026-08-28T04:09:41.424Z] Deepgram Transcript: "Resume in balance." (is_final: true)
+[2026-08-28T04:09:48.083Z] Deepgram Transcript: "Edit profile." (is_final: true)
+[2026-08-28T04:09:59.847Z] Deepgram Transcript: "It didn't provide" (is_final: true)
+[2026-08-28T04:10:00.702Z] Deepgram Transcript: "Edit profile." (is_final: true)
+[2026-08-28T04:10:00.707Z] Deepgram Transcript: "Edit profile." (is_final: true)
+[2026-08-28T04:10:11.776Z] Deepgram Transcript: "Email address" (is_final: true)
+[2026-08-28T04:10:18.403Z] Deepgram Transcript: "Email address." (is_final: true)
+[2026-08-28T04:10:18.492Z] Deepgram Transcript: "Email address." (is_final: true)
+[2026-08-28T04:10:31.595Z] Deepgram Transcript: "Yeah. And the razi@gu27atgmail.com." (is_final: true)
+[2026-08-28T04:10:31.620Z] Deepgram Transcript: "Yeah. And the razigu27@gmail.com." (is_final: true)
+[2026-08-28T04:10:46.856Z] Deepgram Transcript: "No, Sue." (is_final: true)
+[2026-08-28T04:10:46.885Z] Deepgram Transcript: "Not soon." (is_final: true)
+[2026-08-28T04:10:50.238Z] Deepgram Transcript: "Save the profile." (is_final: true)
+[2026-08-28T04:11:01.314Z] Deepgram Transcript: "Okay." (is_final: true)
+[2026-08-28T04:11:01.618Z] Deepgram Transcript: "Save the profile." (is_final: true)
+[2026-08-28T04:11:03.376Z] Deepgram Transcript: "Save the profile." (is_final: true)
+[2026-08-28T04:11:03.860Z] Deepgram Transcript: "Save the profile." (is_final: true)
+[2026-08-28T04:11:04.294Z] Deepgram Transcript: "Yes." (is_final: true)
+[2026-08-28T04:11:19.510Z] Frontend WS closed. Total bytes sent to DG: 907330
+[2026-08-28T04:11:35.406Z] Deepgram Transcript: "Audrey," (is_final: true)
+[2026-08-28T04:11:43.619Z] Deepgram Transcript: "Yeah." (is_final: true)
+[2026-08-28T04:29:33.617Z] Frontend WS closed. Total bytes sent to DG: 2590174
+[2026-08-28T04:29:34.310Z] Deepgram Error: 

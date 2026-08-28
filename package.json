@@ -1,0 +1,14 @@
+{
+  "name": "hostel-management-system-root",
+  "version": "1.0.0",
+  "description": "Complete Hostel Management System (Full-Stack React + Node/Express)",
+  "scripts": {
+    "server": "npm run start --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm run test --prefix server",
+    "start": "node server/index.js"
+  },
+  "keywords": ["hostel", "management", "system", "react", "express"]
+}
