@@ -111,52 +111,73 @@ export function GlobalVoiceAgent() {
 
   const startListening = async () => {
     try {
-      setStatus('connecting');
+      setStatus('listening');
       setIsActive(true);
       setTranscript('');
-      setAssistantMessage('Connecting to AI...');
+      setAssistantMessage('Listening... Click square to stop and analyze.');
 
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       audioStreamRef.current = stream;
       
-      const mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+      const mediaRecorder = new MediaRecorder(stream);
       mediaRecorderRef.current = mediaRecorder;
 
-      const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const socket = new WebSocket(`${wsProtocol}//${window.location.host}/api/speech/live`);
-      socketRef.current = socket;
+      const audioChunks = [];
 
-      socket.onopen = () => {
-        setStatus('listening');
-        speak("I am listening. Tell me what to do.");
-        
-        mediaRecorder.addEventListener('dataavailable', event => {
-          if (event.data.size > 0 && socket.readyState === 1) {
-            socket.send(event.data);
-          }
-        });
-        mediaRecorder.start(250); // Send chunks every 250ms for real-time
-      };
-
-      socket.onmessage = (message) => {
-        const received = JSON.parse(message.data);
-        if (received.channel && received.channel.alternatives[0]) {
-          const newTranscript = received.channel.alternatives[0].transcript;
-          if (newTranscript && received.is_final) {
-            setTranscript(newTranscript.trim());
-            processCommand(newTranscript);
-          }
+      mediaRecorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          audioChunks.push(event.data);
         }
       };
 
-      socket.onclose = () => {
-        stopListening();
+      mediaRecorder.onstop = async () => {
+        setStatus('processing');
+        setAssistantMessage('Analyzing your voice...');
+        
+        const mimeType = mediaRecorder.mimeType || 'audio/webm';
+        const audioBlob = new Blob(audioChunks, { type: mimeType });
+        const formData = new FormData();
+        formData.append('audio', audioBlob, 'voice' + (mimeType.includes('mp4') ? '.mp4' : '.webm'));
+
+        try {
+          const res = await fetch('/api/deepgram/transcribe', {
+            method: 'POST',
+            body: formData
+          });
+          const data = await res.json();
+          
+          if (!res.ok || data.error) {
+            setAssistantMessage('Backend Error: ' + (data.error || 'Server returned ' + res.status));
+            setStatus('idle');
+            setIsActive(false);
+            return;
+          }
+
+          if (data.success && data.transcript) {
+            setTranscript(data.transcript);
+            processCommand(data.transcript);
+          } else {
+             if (audioBlob.size < 1000) {
+               setAssistantMessage('Error: No audio recorded. Mic is muted or silent.');
+             } else {
+               setAssistantMessage("I couldn't hear any words. Please try again.");
+             }
+             setTimeout(() => setIsActive(false), 3000);
+          }
+        } catch (err) {
+          console.error(err);
+          setAssistantMessage('Transcription API failed.');
+          setTimeout(() => setIsActive(false), 3000);
+        }
+        
+        // Clean up stream tracks
+        if (audioStreamRef.current) {
+          audioStreamRef.current.getTracks().forEach(track => track.stop());
+        }
       };
 
-      socket.onerror = (error) => {
-        console.error("Deepgram WebSocket Error:", error);
-        stopListening();
-      };
+      mediaRecorder.start();
+      speak("I am listening. Click the stop button when you are done.");
 
     } catch (err) {
       console.error('Mic access error:', err);
@@ -170,13 +191,6 @@ export function GlobalVoiceAgent() {
     if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
       mediaRecorderRef.current.stop();
     }
-    if (audioStreamRef.current) {
-      audioStreamRef.current.getTracks().forEach(track => track.stop());
-    }
-    if (socketRef.current && socketRef.current.readyState === 1) {
-      socketRef.current.close();
-    }
-    setStatus('idle');
   };
 
   const toggleAgent = () => {
