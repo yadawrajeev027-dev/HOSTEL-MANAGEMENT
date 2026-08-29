@@ -49,9 +49,10 @@ export function EmergencyMicrophone({ onCallConnected }) {
 
       mediaRecorder.onstop = async () => {
         setStatus('processing');
-        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+        const mimeType = mediaRecorder.mimeType || 'audio/webm';
+        const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
         const formData = new FormData();
-        formData.append('audio', audioBlob, 'emergency.webm');
+        formData.append('audio', audioBlob, 'emergency' + (mimeType.includes('mp4') ? '.mp4' : '.webm'));
 
         try {
           const res = await fetch('/api/deepgram/transcribe', {
@@ -64,6 +65,11 @@ export function EmergencyMicrophone({ onCallConnected }) {
             setTranscript(data.transcript);
             analyzeTranscript(data.transcript);
           } else {
+            if (audioBlob.size < 1000) {
+              alert("Warning: Your browser only recorded " + audioBlob.size + " bytes (basically empty). Your microphone might be muted in Windows, or it's recording the wrong audio device (like Stereo Mix instead of your headset).");
+            } else {
+               alert("Deepgram successfully processed " + Math.round(audioBlob.size / 1024) + " KB of audio, but found ZERO words. Make sure you are speaking clearly!");
+            }
             setStatus('unidentified');
           }
         } catch (err) {
