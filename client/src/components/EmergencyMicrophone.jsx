@@ -27,6 +27,10 @@ export function EmergencyMicrophone({ onCallConnected }) {
     };
   }, []);
 
+  const [volume, setVolume] = useState(0);
+  const animationRef = useRef(null);
+  const audioContextRef = useRef(null);
+
   const startListening = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -37,6 +41,26 @@ export function EmergencyMicrophone({ onCallConnected }) {
       setDetectedService(null);
       setFailMessage('');
       audioChunksRef.current = [];
+
+      // Audio Context for Volume Visualization
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      audioContextRef.current = audioContext;
+      const analyzer = audioContext.createAnalyser();
+      const microphone = audioContext.createMediaStreamSource(stream);
+      microphone.connect(analyzer);
+      analyzer.fftSize = 256;
+      const dataArray = new Uint8Array(analyzer.frequencyBinCount);
+
+      const updateVolume = () => {
+        analyzer.getByteFrequencyData(dataArray);
+        let sum = 0;
+        for (let i = 0; i < dataArray.length; i++) {
+          sum += dataArray[i];
+        }
+        setVolume(sum / dataArray.length);
+        animationRef.current = requestAnimationFrame(updateVolume);
+      };
+      updateVolume();
 
       const mediaRecorder = new MediaRecorder(stream);
       mediaRecorderRef.current = mediaRecorder;
@@ -49,6 +73,9 @@ export function EmergencyMicrophone({ onCallConnected }) {
 
       mediaRecorder.onstop = async () => {
         setStatus('processing');
+        if (animationRef.current) cancelAnimationFrame(animationRef.current);
+        if (audioContextRef.current) audioContextRef.current.close();
+
         const mimeType = mediaRecorder.mimeType || 'audio/webm';
         const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
         const formData = new FormData();
@@ -210,6 +237,18 @@ export function EmergencyMicrophone({ onCallConnected }) {
               <Mic className="w-8 h-8" />
             </button>
             <p className="text-sm font-bold text-brand-600 animate-pulse">Listening... (Click to Stop)</p>
+            
+            {/* Visual Volume Meter */}
+            <div className="w-64 h-3 bg-slate-200 rounded-full mx-auto overflow-hidden">
+              <div 
+                className={`h-full transition-all duration-75 ${volume > 10 ? 'bg-green-500' : 'bg-red-500'}`} 
+                style={{ width: `${Math.min(100, (volume / 50) * 100)}%` }}
+              />
+            </div>
+            <p className="text-xs text-slate-500">
+              {volume > 10 ? "Good volume detected!" : "I can't hear you! Mic is picking up silence."}
+            </p>
+
             {(transcript || partialTranscript) && (
               <p className="text-sm font-medium text-slate-700 bg-slate-100 p-3 rounded-xl mx-auto max-w-md">
                 {transcript} {partialTranscript && <span className="opacity-50">{partialTranscript}</span>}
